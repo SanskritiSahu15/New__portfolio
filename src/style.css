@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset so anchored sections aren't hidden behind the fixed navbar. */
+    scroll-padding-top: 5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #0a0a0b;
+    color: #d4d4d8;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Custom selection + scrollbar to match the dark/orange theme */
+  ::selection {
+    background-color: #fa5a1e;
+    color: #0a0a0b;
+  }
+
+  * {
+    scrollbar-color: #fa5a1e #18181b;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #18181b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fa5a1e;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scroll reveal (applied via the v-reveal directive).
+   Kept at the top level — not inside @layer — so it overrides Tailwind's
+   `transition-*` utilities on the same element.
+   --------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Directional reveal variants */
+.reveal-left {
+  transform: translateX(-40px);
+}
+.reveal-right {
+  transform: translateX(40px);
+}
+.reveal-left.reveal-visible,
+.reveal-right.reveal-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Soft radial glow used behind hero / CTA sections */
+.glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(250, 90, 30, 0.5) 0%,
+    rgba(250, 90, 30, 0) 70%
+  );
+}
+
+/* Animated gradient text for headings */
+.text-gradient {
+  background: linear-gradient(110deg, #fff 0%, #ff9568 45%, #fa5a1e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Buttons — literal orange so they render independent of the Tailwind theme state.
+   Pair `.btn-primary` (solid) with `.btn-outline` (ghost that fills orange on hover). */
+.btn-primary {
+  background-color: #fa5a1e;
+  color: #fff;
+  box-shadow: 0 0 30px -8px rgba(250, 90, 30, 0.6);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #ff6a35;
+  box-shadow: 0 0 42px -6px rgba(250, 90, 30, 0.9);
+}
+
+.btn-outline {
+  border: 1px solid #3f3f46;
+  color: #fff;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.btn-outline:hover {
+  border-color: #fa5a1e;
+  background-color: rgba(250, 90, 30, 0.12);
+  color: #ff8a5c;
+  box-shadow: 0 0 30px -10px rgba(250, 90, 30, 0.7);
+}
+
+/* Contact modal transition */
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.25s ease;
+}
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+.dialog-card {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+}
+.modal-enter-from .dialog-card,
+.modal-leave-to .dialog-card {
+  transform: scale(0.94) translateY(10px);
+  opacity: 0;
+}
+
+/* Faint grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
