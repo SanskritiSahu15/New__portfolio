@@ -59,8 +59,9 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
       :class="scrolled ? 'border-b border-zinc-900 bg-[#0a0a0b]/85 backdrop-blur-md' : 'bg-transparent'"
     >
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#top" class="font-display text-lg font-bold tracking-tight text-white sm:text-xl">
-          AI<span style="color: #fa5a1e">/</span>ML Engineer
+        <a href="#top" class="flex flex-col leading-none text-white">
+          <span class="font-display text-lg font-bold tracking-tight sm:text-xl">{{ profile.name }}</span>
+          <span class="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">{{ profile.title }}</span>
         </a>
 
         <div class="hidden items-center gap-1 md:flex">
@@ -80,7 +81,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
             type="button"
             class="btn-primary hidden rounded-lg px-4 py-2 text-sm font-semibold hover:-translate-y-0.5 sm:inline-block"
             @click="contactOpen = true"
-          >Hire Me!</button>
+          >Let's Connect</button>
 
           <button
             type="button"
@@ -105,7 +106,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
             class="block rounded-md px-3 py-2 text-sm font-medium text-zinc-300 hover:bg-zinc-900 hover:text-brand-400"
             @click="menuOpen = false"
           >{{ link.label }}</a>
-          <button type="button" class="btn-primary mt-2 block w-full rounded-lg px-3 py-2 text-center text-sm font-semibold" @click="contactOpen = true; menuOpen = false">Hire Me!</button>
+          <button type="button" class="btn-primary mt-2 block w-full rounded-lg px-3 py-2 text-center text-sm font-semibold" @click="contactOpen = true; menuOpen = false">Let's Connect</button>
         </div>
       </div>
     </header>
@@ -127,7 +128,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
             <div class="glow pointer-events-none absolute -bottom-10 -right-10 h-56 w-56 animate-glow-pulse [animation-delay:1.5s]"></div>
             <p class="relative text-sm font-semibold uppercase tracking-[0.2em] text-brand-500">Let's build something</p>
             <h2 class="relative mx-auto mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Available for full-time roles &amp; freelance AI projects
+              Open to QA, backend, and AI engineering opportunities
             </h2>
             <p class="relative mx-auto mt-4 max-w-xl text-zinc-400">
               Have a project or role in mind? I'd love to hear about it — let's talk about how I can help you ship.
@@ -138,7 +139,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
                 class="btn-primary inline-flex items-center gap-2 rounded-lg px-7 py-3.5 text-sm font-semibold hover:-translate-y-0.5"
                 @click="contactOpen = true"
               >
-                Hire Me!
+                Let's Connect
               </button>
               <a
                 :href="profile.resumeFile"
@@ -156,7 +157,10 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
     <footer class="border-t border-zinc-900">
       <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-12 sm:flex-row sm:items-center lg:px-8">
         <div>
-          <a href="#top" class="font-display text-xl font-bold text-white">AI<span style="color: #fa5a1e">/</span>ML Engineer</a>
+          <a href="#top" class="flex flex-col leading-none text-white">
+            <span class="font-display text-xl font-bold">{{ profile.name }}</span>
+            <span class="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">{{ profile.title }}</span>
+          </a>
           <p class="mt-2 text-sm text-zinc-500">{{ profile.name }} — {{ profile.title }} · {{ profile.location }}</p>
         </div>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">

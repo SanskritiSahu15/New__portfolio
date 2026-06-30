@@ -36,7 +36,7 @@ const pad = (n) => String(n + 1).padStart(2, '0')
       <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
         Selected projects &amp; research
       </h2>
-      <p class="mt-3 text-zinc-400">Technical work shipped across internships, plus published research.</p>
+      <p class="mt-3 text-zinc-400">Selected work across QA, backend development, computer vision, and published research.</p>
     </div>
 
     <!-- Filter tabs (editorial underline, not pills) -->

@@ -33,7 +33,7 @@ function escapeRegExp(str) {
         </p>
         <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Experience</h2>
       </div>
-      <span class="text-xs font-medium uppercase tracking-wide text-zinc-500">18+ months · 4 internships</span>
+      <span class="text-xs font-medium uppercase tracking-wide text-zinc-500">3 roles · published research</span>
     </div>
 
     <!-- Timeline -->

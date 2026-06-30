@@ -98,43 +98,18 @@ onBeforeUnmount(() => clearInterval(timer))
         </div>
       </div>
 
-      <!-- Right: portrait with animated geometry -->
-      <div v-reveal="{ delay: 200 }" class="relative mx-auto w-full max-w-md">
-        <!-- Rotating geometric line art -->
-        <svg class="pointer-events-none absolute inset-0 h-full w-full animate-spin-slow text-brand-500/50" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-          <polygon points="200,30 370,300 30,300" stroke="currentColor" stroke-width="1" />
-          <polygon points="200,370 30,100 370,100" stroke="currentColor" stroke-width="1" />
-        </svg>
-        <svg class="pointer-events-none absolute inset-0 h-full w-full animate-spin-slow-reverse text-white/10" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-          <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="1" stroke-dasharray="6 10" />
-        </svg>
-
-        <!-- Portrait frame -->
-        <div class="relative aspect-[4/5] animate-float-sm overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-zinc-950">
-          <img
-            v-if="profile.photo"
-            :src="profile.photo"
-            :alt="profile.name"
-            class="h-full w-full object-cover object-top grayscale transition-all duration-500 hover:grayscale-0"
-          />
-          <!-- Placeholder shown until a photo is provided -->
-          <div v-else class="flex h-full w-full flex-col items-center justify-center gap-3 text-center">
-            <span class="font-display text-7xl font-bold text-zinc-700">H</span>
-            <span class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-500">Add your photo →</span>
-            <span class="max-w-[12rem] text-[11px] leading-relaxed text-zinc-600">
-              drop <span class="text-brand-400">public/profile.jpg</span> &amp; set <span class="text-brand-400">profile.photo</span>
-            </span>
-          </div>
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent"></div>
-        </div>
-
-        <!-- Floating "open to work" chip -->
-        <div class="absolute -bottom-4 -left-4 flex animate-float items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/90 px-4 py-2.5 backdrop-blur">
-          <span class="relative flex h-2 w-2">
+      <!-- Right: availability card -->
+      <div v-reveal="{ delay: 200 }" class="relative mx-auto flex w-full max-w-md flex-col gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+        <h3 class="font-display text-2xl font-semibold text-white">{{ profile.availability }}</h3>
+        <p class="text-sm leading-relaxed text-zinc-400">
+          I’m interested in opportunities where I can contribute to quality engineering, backend systems, and AI-driven product development.
+        </p>
+        <div class="flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-950/70 px-4 py-3 text-sm text-zinc-300">
+          <span class="relative flex h-2.5 w-2.5">
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
           </span>
-          <span class="text-xs font-medium text-zinc-300">{{ profile.availability }}</span>
+          Open for new opportunities
         </div>
       </div>
     </div>

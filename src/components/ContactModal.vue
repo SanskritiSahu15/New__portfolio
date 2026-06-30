@@ -8,7 +8,7 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 
 // FormSubmit endpoint (AJAX so we never navigate away from the page).
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/harshityuvraj10@gmail.com'
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sanskriti1502@gmail.com'
 
 const name = ref('')
 const fromEmail = ref('')

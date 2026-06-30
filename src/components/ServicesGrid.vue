@@ -7,7 +7,8 @@ const icons = {
   chart: 'M4 20a1 1 0 0 1-1-1V4a1 1 0 1 1 2 0v14h14a1 1 0 1 1 0 2H4Zm4-4a1 1 0 0 1-1-1v-3a1 1 0 1 1 2 0v3a1 1 0 0 1-1 1Zm4 0a1 1 0 0 1-1-1V8a1 1 0 1 1 2 0v7a1 1 0 0 1-1 1Zm4 0a1 1 0 0 1-1-1v-5a1 1 0 1 1 2 0v5a1 1 0 0 1-1 1Z',
   code: 'M8.7 7.3a1 1 0 0 1 0 1.4L5.42 12l3.3 3.3a1 1 0 1 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 0Zm6.6 0a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4L18.6 12l-3.3-3.3a1 1 0 0 1 0-1.4Z',
   cpu: 'M9 3a1 1 0 0 1 1 1v1h4V4a1 1 0 1 1 2 0v1a3 3 0 0 1 3 3h1a1 1 0 1 1 0 2h-1v4h1a1 1 0 1 1 0 2h-1a3 3 0 0 1-3 3v1a1 1 0 1 1-2 0v-1h-4v1a1 1 0 1 1-2 0v-1a3 3 0 0 1-3-3H4a1 1 0 1 1 0-2h1v-4H4a1 1 0 0 1 0-2h1a3 3 0 0 1 3-3V4a1 1 0 0 1 1-1Zm0 6v6h6V9H9Z',
-  spark: 'M12 2a1 1 0 0 1 .95.69l1.4 4.27 4.48.02a1 1 0 0 1 .59 1.8l-3.62 2.64 1.36 4.28a1 1 0 0 1-1.54 1.12L12 14.77l-3.62 2.65a1 1 0 0 1-1.54-1.12l1.36-4.28L4.58 9.4a1 1 0 0 1 .59-1.8l4.48-.02 1.4-4.27A1 1 0 0 1 12 2Z'
+  spark: 'M12 2a1 1 0 0 1 .95.69l1.4 4.27 4.48.02a1 1 0 0 1 .59 1.8l-3.62 2.64 1.36 4.28a1 1 0 0 1-1.54 1.12L12 14.77l-3.62 2.65a1 1 0 0 1-1.54-1.12l1.36-4.28L4.58 9.4a1 1 0 0 1 .59-1.8l4.48-.02 1.4-4.27A1 1 0 0 1 12 2Z',
+  check: 'M20.3 6.3a1 1 0 0 1 0 1.4l-8.4 8.4a1 1 0 0 1-1.4 0l-4.2-4.2a1 1 0 0 1 1.4-1.4l3.5 3.5 7.7-7.7a1 1 0 0 1 1.4 0Z'
 }
 
 const pad = (n) => String(n + 1).padStart(2, '0')
@@ -23,7 +24,7 @@ const pad = (n) => String(n + 1).padStart(2, '0')
         Services &amp; expertise
       </h2>
       <p class="mt-3 text-zinc-400">
-        End-to-end applied-AI work, from research and prototyping to shipping production features.
+        End-to-end product work spanning QA strategy, backend engineering, and applied AI.
       </p>
     </div>
 

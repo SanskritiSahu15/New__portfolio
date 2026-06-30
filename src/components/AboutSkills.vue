@@ -24,7 +24,7 @@ const { target, inView } = useInView({ threshold: 0.25 })
 
         <!-- Experience badge -->
         <div class="absolute -bottom-5 -right-4 animate-float rounded-2xl px-6 py-4 text-white shadow-[0_0_40px_-8px_rgba(250,90,30,0.8)]" style="background-color: #fa5a1e">
-          <p class="font-display text-3xl font-bold leading-none">18+</p>
+          <p class="font-display text-3xl font-bold leading-none">16+</p>
           <p class="mt-1 text-xs font-semibold uppercase tracking-wide">Months of<br />Experience</p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const { target, inView } = useInView({ threshold: 0.25 })
           <span class="h-px w-8 bg-brand-500"></span> About Me
         </p>
         <h2 class="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
-          Turning AI research into shipped product.
+          Building reliable software at the intersection of QA, backend, and AI.
         </h2>
         <p class="mt-5 leading-relaxed text-zinc-400">
           {{ profile.valueProp }}
