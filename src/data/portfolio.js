@@ -9,7 +9,7 @@ export const profile = {
   title: 'QA Engineer',
   roles: ['QA Engineer', 'Backend Developer', 'AI Engineer'],
   location: 'Bangalore, India',
-  phone: '',
+  phone: '8236968093',
   email: 'sanskriti1502@gmail.com',
   github: 'https://github.com/SanskritiSahu15',
   githubHandle: 'github.com/SanskritiSahu15',
@@ -78,11 +78,11 @@ export const education = [
     degree: 'B.Tech, Artificial Intelligence & Data Science',
     school: 'Dr. D. Y. Patil College of Engineering',
     detail: 'Graduated with a strong foundation in machine learning, deep learning, computer vision, NLP, and data-driven software development.',
-    period: '4 years',
+    period: '2022 - 2026',
     coursework: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'NLP', 'DBMS', 'Data Structures']
   },
   {
-    degree: 'Higher Secondary Education',
+    degree: 'M.G.M Senior Secondary School',
     school: 'CBSE Board, Bhilai',
     detail: '12th: 88% | 10th: 85.5%',
     period: '2017 - 2022',
@@ -100,6 +100,7 @@ export const experiences = [
     role: 'QA Engineer',
     location: 'Bangalore, India',
     period: '2026',
+    months: '6',
     current: true,
     highlights: [
       {
@@ -117,6 +118,7 @@ export const experiences = [
     role: 'Backend Developer',
     location: 'Bangalore, India',
     period: '2025',
+    months: '6',
     current: false,
     highlights: [
       {
@@ -134,6 +136,7 @@ export const experiences = [
     role: 'Computer Vision Engineer',
     location: 'Bangalore, India',
     period: '2025',
+    months: '2',
     current: false,
     highlights: [
       {
@@ -266,7 +269,19 @@ export const achievements = [
 ]
 
 export const extras = [
-  'Exploring modern QA tooling and AI-assisted testing workflows.',
-  'Reading about scalable backend architecture and agentic AI systems.',
-  'Enjoying projects that connect product thinking with technical execution.'
-]
+  {
+    title: "📄 Research Paper",
+    description:
+      "Published research on Speech Emotion Recognition using deep learning.",
+  },
+  {
+    title: "🎤 Conference Speaker",
+    description:
+      "Presented research at the ICONS International Conference.",
+  },
+  {
+    title: "🏆 Hackathon",
+    description:
+      "3rd Place – National Data Visualization Competition.",
+  },
+];

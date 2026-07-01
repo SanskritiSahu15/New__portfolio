@@ -49,11 +49,11 @@ const pad = (n) => String(n + 1).padStart(2, '0')
         <ul class="mt-4 grid gap-3 sm:grid-cols-2">
           <li
             v-for="item in extras"
-            :key="item"
-            class="flex gap-3 text-sm text-zinc-400"
+            :key="item.title"
+            class="space-y-1 rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-400"
           >
-            <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-500" aria-hidden="true"></span>
-            {{ item }}
+            <p class="font-semibold text-white">{{ item.title }}</p>
+            <p>{{ item.description }}</p>
           </li>
         </ul>
       </div>
